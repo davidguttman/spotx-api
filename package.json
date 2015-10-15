@@ -1,10 +1,10 @@
 {
   "name": "spotx-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple module for accessing SpotX report data.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard"
   },
   "keywords": [],
   "author": "David Guttman <david@guttman.io> (http://davidguttman.com/)",
@@ -13,5 +13,19 @@
     "async-cache": "^1.0.0",
     "jsonist": "^1.2.0",
     "request": "^2.65.0"
-  }
+  },
+  "devDependencies": {
+    "standard": "^5.3.1"
+  },
+  "directories": {
+    "example": "example"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidguttman/spotx-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidguttman/spotx-api/issues"
+  },
+  "homepage": "https://github.com/davidguttman/spotx-api#readme"
 }
