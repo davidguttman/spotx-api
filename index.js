@@ -55,7 +55,7 @@ function getDateRevenue (publisherId, date, cb) {
     url: urlRev,
     jar: jar,
     json: true,
-    query: {
+    qs: {
       date_range: [date, date].join('|')
     }
   }
