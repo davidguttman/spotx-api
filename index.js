@@ -56,7 +56,7 @@ function getDateRevenue (publisherId, date, cb) {
     jar: jar,
     json: true,
     qs: {
-      date_range: [date, date].join('|')
+      date_range: date.indexOf(",") > -1 ? date.split(",").join("|") : [date, date].join('|')
     }
   }
 
