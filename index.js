@@ -30,6 +30,7 @@ function login (creds, cb) {
 
   var opts = {
     url: urlLogin,
+    headers: getHeaders(),
     method: 'POST',
     json: creds,
     jar: jar
@@ -52,6 +53,7 @@ function getDateRevenue (publisherId, date, cb) {
 
   var opts = {
     method: 'GET',
+    headers: getHeaders(),
     url: urlRev,
     jar: jar,
     json: true,
@@ -68,4 +70,8 @@ function getDateRevenue (publisherId, date, cb) {
     var rows = ((body || {}).value || {}).data
     cb(null, rows)
   })
+}
+
+function getHeaders () {
+  return { 'User-Agent' : 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070725 Firefox/2.0.0.6' }
 }
